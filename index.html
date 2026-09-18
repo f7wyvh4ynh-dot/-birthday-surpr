@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد سعيد 🎉</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #8b0000, #ff0043, #d10042);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            max-width: 650px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* شاشة الهدية */
+        .gift-box {
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        .gift-icon {
+            font-size: 90px;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .open-btn {
+            margin-top: 20px;
+            padding: 15px 35px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #d10042;
+            background-color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .open-btn:hover {
+            background-color: #ffe6e6;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* شاشة الرسالة */
+        .card {
+            display: none;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .poetry {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.8;
+            color: #ffe6e6;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        .message {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #ffffff;
+            white-space: pre-line;
+        }
+
+        /* أنيميشن القلوب المتساقطة */
+        .heart {
+            position: fixed;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 24px;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الواجهة الأولى: افتح الهدية -->
+        <div id="giftSection">
+            <div class="gift-box" onclick="openGift()">
+                <div class="gift-icon">🎁</div>
+            </div>
+            <br>
+            <button class="open-btn" onclick="openGift()">إفتح الهدية ✨</button>
+        </div>
+
+        <!-- الواجهة الثانية: الرسالة -->
+        <div id="cardSection" class="card">
+            <div class="poetry">
+                هَنِينَا لَكَ العِيدُ الَّذِي أَنتَ عِيدُهُ<br>
+                وَأَنتَ مِن فَيْضِ البَهَاءِ تَزِيدُهُ<br><br>
+                وَإِنِّي إِذَا أَهدَاكَ غَيْرِي وَرْدَةً<br>
+                سَأُهدِيكَ بستاناً أَنتَ فِيهِ وَرِيدُهُ
+            </div>
+            <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.3); margin: 20px 0;">
+            <div class="message">
+في عيدِ ميلادك تزدهرُ الدُنيا تفتُح الازهار ويحتِفل الكَونُ مِن حُسنك،
+وكأن ميلادكِ الربيع بحد ذاتِه وفي مثلِ هذا اليومُ قُدَّر لِلأرض أن تحتضنْ مثلِ هذا اليوِمُ قدَر لِلأرض أن تحتضنُ قلباً صافياً لينشرَ البهجةَ في حياة كل من يعرفونه فكل عامٍ وأنتِ الأجمل ، عيدُكَ نورٌ لاحَ في الآفاقِ وَروحُكَ تُزهرُ بالسَّنا الباقي فكأنَّ وجهَ الكونِ في بسمتِكَ صبحٌ تجلَّى بالهدى الراقي، وهذا ابسط شي اقدمه لعيونج الحلوة، وما اكول بس الله يخليج اليه و يفتحلج كل البهجة والسرور يا اعز ناسي 💕🎉
+
+H.B.DDDDDD 💐💐
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openGift() {
+            document.getElementById('giftSection').style.display = 'none';
+            document.getElementById('cardSection').style.display = 'block';
+            createHearts();
+        }
+
+        function createHearts() {
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = ['❤️', '💖', '✨', '🌸'][Math.floor(Math.random() * 4)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+                    heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => { heart.remove(); }, 5000);
+                }, i * 150);
+            }
+        }
+    </script>
+</body>
+</html>
